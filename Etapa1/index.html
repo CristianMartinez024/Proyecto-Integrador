@@ -5,9 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto integradort</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="js/codigo.js"></script>
+    <script defer src="js/codigo.js"></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Sistema de Gestión para Fintech</h1>
+    </header>
+    <main>
+        <section id="crearCliente">
+            <h2>Crear Cliente</h2>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellido" placeholder="Apellido">
+            <input type="text" id="dni" placeholder="DNI">
+            <input type="email" id="email" placeholder="Correo electrónico">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="crearCliente()">Crear Cliente</button>
+        </section>
+
+        <section id="crearCuenta">
+            <h2>Crear Cuenta</h2>
+            <input type="text" id="codigoCuenta" placeholder="Código de cuenta">
+            <input type="number" id="saldoInicial" placeholder="Saldo inicial">
+            <button onclick="crearCuenta()">Crear Cuenta</button>
+        </section>
+
+        <section id="operaciones">
+            <h2>Realizar Movimiento</h2>
+            <input type="text" id="codigoCuentaMovimiento" placeholder="Código de cuenta">
+            <input type="number" id="monto" placeholder="Monto">
+            <select id="tipoMovimiento">
+                <option value="depósito">Depósito</option>
+                <option value="retiro">Retiro</option>
+            </select>
+            <button onclick="realizarMovimiento()">Realizar Movimiento</button>
+        </section>
+
+        <section id="consultaSaldo">
+            <h2>Consultar Saldo</h2>
+            <input type="text" id="codigoCuentaConsulta" placeholder="Código de cuenta">
+            <button onclick="consultarSaldo()">Consultar Saldo</button>
+            <div id="resultadoSaldo"></div>
+        </section>
+    </main>
 </body>
 </html>
